@@ -1,13 +1,13 @@
 <template>
     <DefaultLayout>
-        <main class="w-full p-4 flex flex-col lg:flex-row gap-8 max-w-screen-2xl mx-auto">
+        <main class="w-full p-4 flex flex-col items-center lg:flex-row lg:items-start gap-8 max-w-screen-2xl mx-auto">
             <section
-                class="canvas aspect-square grow max-h-[calc(100dvh-32px-var(--header-height))] lg:sticky top-4 col-span-12 lg:col-span-7 bg-gradient-to-t from-neutral-200 to-background rounded-xl ring ring-neutral-200">
+                class="canvas aspect-square grow w-full h-fit max-h-[calc(100dvh-32px-var(--header-height))] max-w-screen-md lg:sticky top-4 col-span-12 lg:col-span-7 bg-gradient-to-t from-neutral-200 to-background rounded-xl ring ring-neutral-200">
                 {{ plateStore.INITIAL_PLATE }}
                 {{ plateStore.plates.length }}
                 {{ plateStore.plates }}
             </section>
-            <section class="control grow flex flex-col gap-4">
+            <section class="control grow w-full flex flex-col gap-4">
                 <h1 class="text-xl"><span class="font-bold">Maße.</span> Eingeben</h1>
                 <motion.ol layout class="flex flex-col gap-4">
                     <AnimatePresence>
