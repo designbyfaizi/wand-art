@@ -6,11 +6,8 @@
       <section
         class="canvas aspect-square grow w-full h-fit max-h-[calc(100dvh-32px-var(--header-height))] max-w-screen-md lg:sticky top-4 col-span-12 lg:col-span-7 bg-gradient-to-t from-neutral-200 to-background rounded-xl ring ring-neutral-200"
       >
-        {{ plateStore.INITIAL_PLATE }}
-        {{ plateStore.plates.length }}
-        {{ plateStore.plates }}
       </section>
-      <section class="control grow w-full flex flex-col gap-4 mb-10">
+      <section class="control grow w-full flex flex-col gap-4 mb-10 max-w-screen-md">
         <h1 class="text-xl"><span class="font-bold">Maße.</span> Eingeben</h1>
         <motion.ol layout class="flex flex-col gap-4">
           <AnimatePresence>
@@ -37,7 +34,7 @@
             class="w-full"
             :disabled="plateStore.plates.length >= plateStore.MAX_PLATES"
           >
-            <span> Rückwand hinzufügen </span>
+            <span> {{ t('add_back_panel') }} </span>
             <PlusIcon class="w-4 h-4" />
           </Button>
         </div>
@@ -48,6 +45,7 @@
 </template>
 
 <script lang="ts" setup>
+import { useI18n } from "vue-i18n";
 import { AnimatePresence, motion, Motion } from "motion-v";
 import { Button } from "@/components/ui/button";
 import { PlateCard } from "@/components/plate-card";
@@ -55,6 +53,9 @@ import { PlusIcon } from "lucide-vue-next";
 import { usePlateStore } from "@/stores/plate.store";
 import { DefaultLayout } from "@/layouts";
 
+const { t } = useI18n({
+  useScope: "global",
+});
 const plateStore = usePlateStore();
 </script>
 

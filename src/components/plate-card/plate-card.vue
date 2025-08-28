@@ -8,7 +8,7 @@
     </p>
     <SizeInput
       v-model="plate.width"
-      :label="('Width')"
+      :label="t('width')"
       :sublabel="`${plateStore.MIN_WIDTH}-${plateStore.MAX_WIDTH}cm`"
       :min="20"
       :max="300"
@@ -19,7 +19,7 @@
     <XIcon class="min-w-3 min-h-3 pt-3" />
     <SizeInput
       v-model="plate.height"
-      :label="('Height')"
+      :label="t('height')"
       :sublabel="`${plateStore.MIN_HEIGHT}-${plateStore.MAX_HEIGHT}cm`"
       :min="30"
       :max="128"
@@ -40,6 +40,7 @@
 </template>
 
 <script lang="ts" setup>
+import { useI18n } from 'vue-i18n'
 import { type PlateSchema } from '@/schemas/plate.schema';
 import { usePlateStore } from '@/stores/plate.store';
 import { SizeInput } from "@/components/size-input";
@@ -47,6 +48,10 @@ import { Button } from "@/components/ui/button";
 import { PlusIcon, XIcon, MinusIcon } from "lucide-vue-next";
 import { computed, ref } from 'vue';
 import { convertCmToMm } from '@/lib/convertCmToMm';
+
+const { t } = useI18n({
+  useScope: 'global'
+})
 
 type Props = {
     as?: HTMLElement | string;
@@ -69,4 +74,15 @@ const setFocus = (focused: boolean, id: string) => {
 const plateIsActive = computed(() => Object.values(focusMap.value).some(v => v))
 </script>
 
-
+<i18n lang="json" locale="de">
+{
+  "Width": "Breite",
+  "Height": "Höhe"
+}
+</i18n>
+<i18n lang="json" locale="en">
+{
+  "Width": "Width",
+  "Height": "Height"
+}
+</i18n>

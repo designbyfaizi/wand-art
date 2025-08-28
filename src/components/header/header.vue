@@ -6,11 +6,13 @@
       <img src="/wand-art-logo.svg" alt="Logo" class="h-8 w-auto" />
       <span class="font-bold text-xl">Wand Art</span>
     </RouterLink>
+    <LanguageToggle class="ms-auto" />
   </header>
 </template>
 
 <script lang="ts" setup>
 import { RouterLink } from "vue-router";
+import { LanguageToggle } from "@/components/language-toggle";
 </script>
 
 <style></style>
