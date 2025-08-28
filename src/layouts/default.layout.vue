@@ -1,6 +1,7 @@
 <template>
     <div>
-        Home Page
+        Default Layout
+        <slot />
     </div>
 </template>
 
