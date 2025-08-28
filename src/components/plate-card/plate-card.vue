@@ -1,5 +1,5 @@
 <template>
-  <component :is="as" class="bg-accent p-3 rounded-lg flex items-center gap-3">
+  <component :is="as" class="bg-accent p-3 rounded-lg flex items-center gap-3 relative">
     <p
       class="w-6 h-6 aspect-square flex items-center justify-center rounded-sm border border-foreground/70 bg-background"
       :class="{ 'bg-foreground text-background': plateIsActive }"
@@ -32,7 +32,7 @@
       :disabled="plateStore.plates.length <= 1"
       size="icon"
       variant="destructive"
-      class="w-5 h-5 rounded-full hover:scale-130"
+      class="w-5 h-5 rounded-full hover:scale-130 absolute -top-2 -right-2 lg:relative"
     >
       <MinusIcon class="size-3" />
     </Button>

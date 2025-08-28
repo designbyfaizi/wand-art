@@ -19,7 +19,6 @@
               :exit="{ opacity: 0, y: 20, height: 0 }"
               :transition="{ type: 'spring', stiffness: 300, damping: 25 }"
               layout
-              class="overflow-hidden"
             >
               <PlateCard as="li" :index="index" :plate="plate" />
             </Motion>
