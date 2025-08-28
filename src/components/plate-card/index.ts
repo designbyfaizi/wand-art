@@ -1,0 +1,1 @@
+export { default as PlateCard } from "./plate-card.vue"
