@@ -1,22 +1,42 @@
 <template>
-    <component :is="as" class="bg-accent p-3 rounded-lg flex items-center gap-3">
-        <p class="w-6 h-6 aspect-square flex items-center justify-center rounded-sm border border-foreground/70 bg-background"
-            :class="{ 'bg-foreground text-background': plateIsActive }">
-            {{ index + 1 }}
-        </p>
-        <SizeInput v-model="plate.width" label="Width" :sublabel="`${plateStore.MIN_WIDTH}-${plateStore.MAX_WIDTH}cm`"
-            :min="20" :max="300" @focus="setFocus(true, 'width')" @blur="setFocus(false, 'width')"
-            :description="`${convertCmToMm(plate.width)}mm`" />
-        <XIcon class="min-w-3 min-h-3 pt-3" />
-        <SizeInput v-model="plate.height" label="Height"
-            :sublabel="`${plateStore.MIN_HEIGHT}-${plateStore.MAX_HEIGHT}cm`" :min="30" :max="128"
-            @focus="setFocus(true, 'height')" @blur="setFocus(false, 'height')"
-            :description="`${convertCmToMm(plate.height)}mm`" />
-        <Button @click="plateStore.removePlate(plate.id)" :disabled="plateStore.plates.length <= 1" size="icon"
-            variant="destructive" class="w-5 h-5 rounded-full hover:scale-130">
-            <MinusIcon class="size-3" />
-        </Button>
-    </component>
+  <component :is="as" class="bg-accent p-3 rounded-lg flex items-center gap-3">
+    <p
+      class="w-6 h-6 aspect-square flex items-center justify-center rounded-sm border border-foreground/70 bg-background"
+      :class="{ 'bg-foreground text-background': plateIsActive }"
+    >
+      {{ index + 1 }}
+    </p>
+    <SizeInput
+      v-model="plate.width"
+      :label="('Width')"
+      :sublabel="`${plateStore.MIN_WIDTH}-${plateStore.MAX_WIDTH}cm`"
+      :min="20"
+      :max="300"
+      @focus="setFocus(true, 'width')"
+      @blur="setFocus(false, 'width')"
+      :description="`${convertCmToMm(plate.width)}mm`"
+    />
+    <XIcon class="min-w-3 min-h-3 pt-3" />
+    <SizeInput
+      v-model="plate.height"
+      :label="('Height')"
+      :sublabel="`${plateStore.MIN_HEIGHT}-${plateStore.MAX_HEIGHT}cm`"
+      :min="30"
+      :max="128"
+      @focus="setFocus(true, 'height')"
+      @blur="setFocus(false, 'height')"
+      :description="`${convertCmToMm(plate.height)}mm`"
+    />
+    <Button
+      @click="plateStore.removePlate(plate.id)"
+      :disabled="plateStore.plates.length <= 1"
+      size="icon"
+      variant="destructive"
+      class="w-5 h-5 rounded-full hover:scale-130"
+    >
+      <MinusIcon class="size-3" />
+    </Button>
+  </component>
 </template>
 
 <script lang="ts" setup>
@@ -49,4 +69,4 @@ const setFocus = (focused: boolean, id: string) => {
 const plateIsActive = computed(() => Object.values(focusMap.value).some(v => v))
 </script>
 
-<style></style>
+
