@@ -32,7 +32,7 @@
       :disabled="plateStore.plates.length <= 1"
       size="icon"
       variant="destructive"
-      class="w-5 h-5 rounded-full hover:scale-130 absolute -top-2 -right-2 lg:relative"
+      class="w-5 h-5 rounded-full hover:scale-130 absolute -top-2 -right-2 lg:static"
     >
       <MinusIcon class="size-3" />
     </Button>

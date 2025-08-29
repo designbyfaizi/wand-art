@@ -1,0 +1,1 @@
+export { default as PlateCanvas } from './plate-canvas.vue';
