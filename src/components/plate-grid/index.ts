@@ -1,0 +1,1 @@
+export { default as PlateGrid } from './plate-grid.vue';

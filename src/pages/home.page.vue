@@ -4,12 +4,12 @@
       class="w-full p-4 flex flex-col items-center lg:flex-row lg:items-start gap-8 max-w-screen-2xl mx-auto"
     >
       <section
-        class="canvas aspect-square grow w-full h-fit max-h-[calc(100dvh-32px-var(--header-height))] max-w-screen-md lg:sticky top-4 col-span-12 lg:col-span-7 bg-gradient-to-t from-neutral-200 to-background rounded-xl ring ring-neutral-200 overflow-hidden flex items-center justify-center"
+        class="canvas relative aspect-square grow w-full h-fit max-h-[calc(100dvh-32px-var(--header-height))] max-w-screen-md lg:sticky top-4 col-span-12 lg:col-span-7 bg-gradient-to-t from-neutral-200 to-background rounded-xl ring ring-neutral-200 overflow-hidden flex items-center justify-center"
       >
-        <PlateCanvas />
+        <PlateGrid />
       </section>
       <section class="control grow w-full flex flex-col gap-4 mb-10 max-w-screen-md">
-        <h1 class="text-xl"><span class="font-bold">Maße.</span> Eingeben</h1>
+        <h1 class="text-xl" v-html="title"></h1>
         <motion.ol layout class="flex flex-col gap-4">
           <AnimatePresence>
             <Motion
@@ -34,7 +34,7 @@
             class="w-full"
             :disabled="plateStore.plates.length >= plateStore.MAX_PLATES"
           >
-            <span> {{ t('add_back_panel') }} </span>
+            <span> {{ t("add_back_panel") }} </span>
             <PlusIcon class="w-4 h-4" />
           </Button>
         </div>
@@ -52,12 +52,18 @@ import { PlateCard } from "@/components/plate-card";
 import { PlusIcon } from "lucide-vue-next";
 import { usePlateStore } from "@/stores/plate.store";
 import { DefaultLayout } from "@/layouts";
-import { PlateCanvas } from "@/components/plate-canvas";
+import { PlateGrid } from "@/components/plate-grid";
+import { computed, ref } from "vue";
 
-const { t } = useI18n({
+const { t, locale } = useI18n({
   useScope: "global",
+});
+
+const title = computed(() => {
+  if (locale.value === "de") {
+    return `<strong>${t("dimensions")}</strong> ${t("enter")}`;
+  }
+  return `${t("enter")} the <strong>${t("dimensions")}</strong>`;
 });
 const plateStore = usePlateStore();
 </script>
-
-<style></style>
