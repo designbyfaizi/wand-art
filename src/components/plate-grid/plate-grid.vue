@@ -198,7 +198,7 @@ function drawBackgroundImage(startX: number, startY: number, scale: number) {
       motifImage.value.height,
       startX,
       startY,
-      totalWidth,
+      300,
       totalHeight
     );
   }
