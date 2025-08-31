@@ -142,7 +142,7 @@ function createPlateClippingPath(
 function drawBackgroundImage(startX: number, startY: number, scale: number) {
   if (!ctx.value || !motifImage.value) return;
 
-  const totalWidth = totalWidthWithGaps.value * scale;
+  const totalWidth = totalPlatesWidth.value * scale;
   const totalHeight = maxHeight.value * scale;
 
   if (needsMirroring.value) {
@@ -156,6 +156,7 @@ function drawBackgroundImage(startX: number, startY: number, scale: number) {
       const cycleWidth = Math.min(mirrorCycleWidth, totalWidth - xOffset);
 
       if (i % 2 === 0) {
+        console.log("Here 1: ", i)
         ctx.value.drawImage(
           motifImage.value,
           0,
@@ -164,7 +165,7 @@ function drawBackgroundImage(startX: number, startY: number, scale: number) {
           motifImage.value.height,
           startX + xOffset,
           startY,
-          cycleWidth,
+          300,
           totalHeight
         );
       } else {
@@ -180,12 +181,12 @@ function drawBackgroundImage(startX: number, startY: number, scale: number) {
           motifImage.value.height,
           0,
           0,
-          cycleWidth,
+          300,
           totalHeight
         );
         ctx.value.restore();
       }
-
+      
       xOffset += cycleWidth;
     }
   } else {
