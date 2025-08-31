@@ -53,7 +53,7 @@ const needsMirroring = computed(() => {
 });
 
 const maxHeight = computed(() => {
-  return Math.max(...plateStore.plates.map(plate => plate.height), 30);
+  return Math.max(...plateStore.plates.map(plate => plate.height), 128);
 });
 
 function updateCanvasSize() {
