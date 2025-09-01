@@ -1,33 +1,57 @@
-# wand-art
+# 🌟 wand-art  
 
-This template should help get you started developing with Vue 3 in Vite.
+A modern Vue 3 template built with **Vite**, **TailwindCSS**, **shadcn-vue**, and **Pinia**, supporting both **Node.js** and **Bun** runtimes.  
 
-## Recommended IDE Setup
+## 🚀 Tech Stack  
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+<p align="left">
+  <img src="https://vitejs.dev/logo.svg" alt="Vite" width="40" height="40"/> 
+  <img src="https://vuejs.org/images/logo.png" alt="Vue" width="40" height="40"/> 
+  <img src="https://raw.githubusercontent.com/tailwindlabs/tailwindcss/master/.github/logo-light.svg" alt="TailwindCSS" width="40" height="40"/>
+  <img src="https://raw.githubusercontent.com/shadcn-ui/ui/main/apps/www/public/favicon.ico" alt="shadcn-vue" width="40" height="40"/>
+  <img src="https://pinia.vuejs.org/logo.svg" alt="Pinia" width="40" height="40"/>
+  <img src="https://nodejs.org/static/images/logo.svg" alt="Node.js" width="50" height="50"/>
+  <img src="https://bun.sh/logo.svg" alt="Bun" width="40" height="40"/>
+</p>  
 
-## Type Support for `.vue` Imports in TS
+---
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## 🛠️ Recommended IDE Setup  
 
-## Customize configuration
+- [VSCode](https://code.visualstudio.com/)  
+- [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (disable Vetur)  
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+---
 
-## Project Setup
+## 🧩 TypeScript Support  
+
+TypeScript cannot handle `.vue` imports by default. We use [`vue-tsc`](https://github.com/vuejs/language-tools) for type-checking.  
+In editors, Volar makes TypeScript aware of `.vue` types.  
+
+---
+
+## ⚙️ Project Setup  
+
+### Using **Bun** 🥖
 
 ```sh
 bun install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 bun dev
+bun run build
 ```
 
-### Type-Check, Compile and Minify for Production
+### Using **Node.js** 🌿
 
+#### With NPM
 ```sh
-bun run build
+npm install
+npm dev
+npm run build
+```
+
+#### With PNPM
+```sh
+pnpm install
+pnpm dev
+pnpm run build
 ```
