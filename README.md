@@ -1,6 +1,6 @@
 # 🌟 wand-art  
 
-A modern Vue 3 template built with **Vite**, **TailwindCSS**, **shadcn-vue**, and **Pinia**, supporting both **Node.js** and **Bun** runtimes.  
+A minimalist Vue 3 app, built with **Vite**, **TailwindCSS**, **shadcn-vue**, and **Pinia**, supporting both **Node.js** and **Bun** runtimes.  
 
 ## 🚀 Tech Stack  
 
