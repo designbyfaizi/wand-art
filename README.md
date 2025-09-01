@@ -10,7 +10,7 @@ A minimalist Vue 3 app, built with **Vite**, **TailwindCSS**, **shadcn-vue**, an
   <img src="https://raw.githubusercontent.com/tailwindlabs/tailwindcss/master/.github/logo-light.svg" alt="TailwindCSS" height="40"/>
   <img src="https://raw.githubusercontent.com/shadcn-ui/ui/main/apps/www/public/favicon.ico" alt="shadcn-vue" width="40" height="40"/>
   <img src="https://pinia.vuejs.org/logo.svg" alt="Pinia" width="40" height="40"/>
-  <img src="https://nodejs.org/static/images/logo.svg" alt="Node.js" width="50" height="50"/>
+  <img src="https://nodejs.org/static/images/logo.svg" alt="Node.js" height="40"/>
   <img src="https://bun.sh/logo.svg" alt="Bun" width="40" height="40"/>
 </p>  
 
