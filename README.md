@@ -7,7 +7,7 @@ A modern Vue 3 template built with **Vite**, **TailwindCSS**, **shadcn-vue**, an
 <p align="left">
   <img src="https://vitejs.dev/logo.svg" alt="Vite" width="40" height="40"/> 
   <img src="https://vuejs.org/images/logo.png" alt="Vue" width="40" height="40"/> 
-  <img src="https://raw.githubusercontent.com/tailwindlabs/tailwindcss/master/.github/logo-light.svg" alt="TailwindCSS" width="40" height="40"/>
+  <img src="https://raw.githubusercontent.com/tailwindlabs/tailwindcss/master/.github/logo-light.svg" alt="TailwindCSS" height="40"/>
   <img src="https://raw.githubusercontent.com/shadcn-ui/ui/main/apps/www/public/favicon.ico" alt="shadcn-vue" width="40" height="40"/>
   <img src="https://pinia.vuejs.org/logo.svg" alt="Pinia" width="40" height="40"/>
   <img src="https://nodejs.org/static/images/logo.svg" alt="Node.js" width="50" height="50"/>
